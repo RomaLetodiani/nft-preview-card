@@ -1,0 +1,145 @@
+/* font-family: 'Outfit', sans-serif; 
+
+colors
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Outfit";
+    color: var(--clr);
+    font-size: 18px;
+}
+
+#content {
+    width: 100%;
+    min-height: 100vh;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d192b;
+}
+
+.card {
+    max-width: 300px;
+    margin: 15px;
+    padding: 25px;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #14253d;
+    border-radius: 15px;
+    box-shadow: 0px 10px 50px 10px #00000050;
+}
+
+header {
+position: relative;
+height: 300px;
+cursor: pointer;
+}
+  
+header::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+background-color: #00FFF8;
+opacity: 0;
+z-index: 0;
+border-radius: 10px;
+transition: 0.6s;
+}
+
+.eye {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+opacity: 0;
+transition: 0.6s;
+}
+
+header:hover::before {
+    opacity: 0.5;
+    transition: 0.6s;
+}
+
+header:hover .eye {
+    opacity: 1;
+    transition: 0.6s;
+}
+
+.equilibrium {
+    width: 100%;
+    border-radius: 10px;
+}
+
+main a {
+    font-size: 22px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+main>p {
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+main>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+main>div>h2 {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0 10px 0;
+    max-height: 30px;
+    border-top: 1px solid #2f415b;
+    font-size: 14px;
+}
+
+footer>img {
+    width: 10%;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+footer>p {
+    font-size: 14px;
+    word-spacing: 3px;
+}
+
+footer>p>a {
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: #00FFF8;
+    transition: 0.5s;
+}
